@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knife Sharpener</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -53,8 +54,56 @@
                 </div>
             </div>
         </div>
+        <form>
+            <section class="form-heading">
+                <h2>Contact Us</h2>
+                <p>Please fill out the form below to get in touch with us.</p>
+                <p>We will respond to your inquiry as soon as possible.</p>
+            </section>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number"><br>
+
+                    <label for="date">Preferred Contact Date:</label>
+                    <input type="date" id="date" name="date"><br>
+
+                    <label for="contact-method">Preferred Contact Method:</label><br>
+                    <input type="radio" id="email-method" name="contact-method" value="email" checked>
+                    <label for="email-method">Email</label><br>
+                    <input type="radio" id="phone-method" name="contact-method" value="phone">
+                    <label for="phone-method">Phone</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Inquiry Details</legend>
+                    <label for="inquiry-type">Inquiry Type:</label>
+                    <select id="inquiry-type" name="inquiry-type">
+                        <option value="general">General Inquiry</option>
+                        <option value="product">Product Information</option>
+                        <option value="support">Customer Support</option>
+                    </select><br>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Your comments" rows="4"
+                        cols="50"></textarea><br>
+
+                    <label for="newsletter">Subscribe to Newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"><br>
+                </fieldset>
+
+                <button type="submit">Submit Request</button>
+                <button type="reset">Reset Form</button>
+            </form>
     </section>
 
+    
 
   
 

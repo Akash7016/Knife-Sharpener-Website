@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knife Sharpener</title>
     <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -15,6 +16,7 @@
         <div class="head">
             <div><a id="logo" href="index.html"><p>Knife Sharpener</p> <img src="images/logo final 1.png" alt=""></a></div>
             <nav>
+                
                 <ul class="navbar">
                     <li id="home" class="link"><a href="index.html">Home</a></li>
                     <li class="link"><a href="product.html">Products</a></li>
@@ -76,17 +78,17 @@
             <p>Excellence in hand with precision</p>
         </div>
         <div class="team-detail">
-            <div>
+            <div id="map">
                 <img class="team-profile" src="images/akash.jpg" alt="">
                 <h1>Akash Yadav</h1>
                 <p>Founder & CEO</p>
             </div>
-            <div>
+            <div id="map">
                 <img class="team-profile" src="images/vishal.jpg" alt="">
                 <h1>Vishal</h1>
                 <p>Senior Technician</p>
             </div>
-            <div>
+            <div id="map">
                 <img class="team-profile" src="images/priyanka.jpg" alt="">
                 <h1>Priyanka</h1>
                 <p>Quality Control Specialist</p>
@@ -101,6 +103,19 @@
         <p>Akash Mahendra Yadav. Student Number: C0943354</p>
     </footer>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.getElementById('navbar');
+    
+            menuToggle.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        });
+    </script>
+    
     
 </body>
 </html>

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knife Sharpener</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -38,19 +39,20 @@
     <section id="contact-us">
         <h1>Media</h1>
 
-        <section class="team">
-            <div class="team-detail">
-                <div>
-                    <img class="team-profile" src="images/section-1.jpg" alt="">
-                </div>
-                <div>
-                    <img class="team-profile" src="images/section-2.jpg" alt="">
-                </div>
-                <div>
-                    <img class="team-profile" src="images/section-3.jpg" alt="">
-                </div>
-            </div>
-        </section>
+        <div id="audio-section">
+            <h2>Listen to Our Podcast</h2>
+            <audio controls>
+                <source src="media/audio.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div id="video-section">
+            <h2>Watch Our Latest Video</h2>
+            <video controls loop autoplay>
+                <source src="media/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
        
     </section>
 
