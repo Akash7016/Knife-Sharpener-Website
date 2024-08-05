@@ -29,6 +29,12 @@
                     <li class="link"><a href="about.html">About Us</a></li>
                     <li class="link"><a href="contact.html">Contact Us</a></li>
                 </ul>
+                <!-- Hamburger Menu Button (visible only on mobile) -->
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </nav>
         </div>
        
@@ -104,18 +110,9 @@
     </footer>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menu-toggle');
-            const navbar = document.getElementById('navbar');
-    
-            menuToggle.addEventListener('click', function() {
-                navbar.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-        });
-    </script>
-    
+
+
+    <script src="js/script.js"></script>    
     
 </body>
 </html>

@@ -70,6 +70,20 @@ nav>ul{
     color: #5d5d5d;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width:  25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:black;
+}
 
 main {
     height: 100vh;
@@ -718,12 +732,7 @@ article p {
         position: static
     }
     
-    .head {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
 
     .section-hero__title {
@@ -734,13 +743,41 @@ article p {
         text-shadow: 3px 5px 6px rgba(6, 6, 6, 0.551);
     }
 
-    nav>ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center; 
+    .hamburger {
+        display: block;
     }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 130px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.823);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 999;
+    }
+     .link {
+        margin: 16px 0;
+     }
+
+     .navbar.active {
+        left: 0;
+     }
 
     main {
         

@@ -36,6 +36,8 @@ header {
     padding: 5px 25px;
 }
 
+
+
 .link>a {
     text-decoration: none;
     color: black;
@@ -70,6 +72,20 @@ nav>ul{
     color: #5d5d5d;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width:  25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:black;
+}
 
 main {
     height: 100vh;
@@ -733,13 +749,7 @@ article p {
         position: static
     }
     
-    .head {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
+    
 
     .section-hero__title {
         text-shadow: 3px 5px 6px rgba(6, 6, 6, 0.475);
@@ -749,13 +759,42 @@ article p {
         text-shadow: 3px 5px 6px rgba(6, 6, 6, 0.551);
     }
 
-    nav>ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center; 
+
+    .hamburger {
+        display: block;
     }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 130px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.823);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 999;
+    }
+     .link {
+        margin: 16px 0;
+     }
+
+     .navbar.active {
+        left: 0;
+     }
 
     main {
         height: 100vh;
@@ -783,8 +822,8 @@ article p {
     #map>img {
         width: 100%;
         height: 100%;
-        border-radius: 10%; /* Adjust as needed for your logo shape */
-        overflow: hidden; /* Ensures the border-radius is applied */
+        border-radius: 10%; 
+        overflow: hidden; 
         padding: 0px 20px;
         
     }
@@ -860,6 +899,44 @@ article p {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 130px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.823);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 999;
+    }
+     .link {
+        margin: 16px 0;
+     }
+
+     .navbar.active {
+        left: 0;
+     }
+}
+
 @media screen and (max-width:375px) {
     .reviewSection {
         padding: 0;
@@ -888,28 +965,20 @@ article p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff; /* Background color */
+    background-color: #ffffff; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure it is on top of everything */
+    z-index: 9999; 
 }
 
-.spinner {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #DFBF98; /* Blue color */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 1s linear infinite;
+.loader {
+    width: 150px;
+    height: 150px;
 }
 
-/* Animation for spinner */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
 
 /* Hide content initially */
 #content {
