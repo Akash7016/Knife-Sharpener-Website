@@ -895,6 +895,47 @@ article p {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.823);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 999;
+    }
+     .link {
+        margin: 16px 0;
+     }
+
+     .navbar.active {
+        left: 0;
+     }
+
+     
+
+}
+
 @media screen and (max-width:375px) {
     .reviewSection {
         padding: 0;
